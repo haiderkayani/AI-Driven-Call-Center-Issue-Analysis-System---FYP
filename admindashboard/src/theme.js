@@ -1,6 +1,5 @@
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material/styles";
-import { Battery20Rounded, ColorLensRounded } from "@mui/icons-material";
 
 //color design tokens
 export const tokens = (mode) => ({
@@ -129,6 +128,7 @@ export const themeSettings = (mode) => {
             mode: mode,
             ...(mode==='dark'
                 ? {
+                    // for dark mode
                     primary: {
                         main: colors.primary[500],
                     },
@@ -136,9 +136,9 @@ export const themeSettings = (mode) => {
                         main: colors.greenAccent[500],
                     },
                     nuetral:{
-                        dark: colors.grey[700],
-                        main: colors.grey[500],
-                        light: colors.grey[100]
+                        dark: colors.gray[700],
+                        main: colors.gray[500],
+                        light: colors.gray[100]
                     },
                     background: {
                         default: colors.primary[500],
@@ -151,9 +151,9 @@ export const themeSettings = (mode) => {
                         main: colors.greenAccent[500],
                     },
                     nuetral:{
-                        dark: colors.grey[700],
-                        main: colors.grey[500],
-                        light: colors.grey[100]
+                        dark: colors.gray[700],
+                        main: colors.gray[500],
+                        light: colors.gray[100]
                     },
                     background: {
                         default: "#fcfcfc",
