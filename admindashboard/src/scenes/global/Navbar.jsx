@@ -73,8 +73,8 @@ const Navbar = () => {
                     >
                         {!isCollapsed && (
                             <Box display="flex" justifyContent="space-between" alignItems="center" ml="15px">
-                                <Typography variant="h3" color={colors.gray[100]}>
-                                    Administrator
+                                <Typography variant="h6" color={colors.redAccent[400]}>
+                                    Call Issue Analysis System
                                 </Typography>
                                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                                     <MenuOutLinedIcon />
@@ -91,13 +91,13 @@ const Navbar = () => {
                                     alt='profile-user'
                                     width="100px"
                                     height="100px"
-                                    src={"../../assets/me.jpg"}
+                                    src={"../../assets/cat.png"}
                                     style={{ cursor: "pointer", borderRadius: "50%" }}
                                 />
                             </Box>
                             <Box textAlign="center">
                                 <Typography variant="h4" color={colors.gray[100]} fontWeight="bold" sx={{ m: "10px 0 0 0" }}>
-                                    Haider Ali Kayani
+                                    Meowy Whiskers
                                 </Typography>
                                 <Typography variant="h6" color={colors.greenAccent[500]}>
                                     CEO FYP Studios
@@ -112,12 +112,12 @@ const Navbar = () => {
                         <Item title='Dashboard' to="/" icon={<HomeOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Manage Team' to="/team" icon={<PeopleOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Contact Information' to="/contacts" icon={<ContactsOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='Invoices Balances' to="/invoices" icon={<ReceiptOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        {/* <Item title='Invoices Balances' to="/invoices" icon={<ReceiptOutLinedIcon />} selected={selected} setSelected={setSelected} /> */}
 
                         <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Pages</Typography>
                         <Item title='Profile Form' to="/form" icon={<PersonOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Calendar' to="/calendar" icon={<CalendarTodayOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='FAQ Page' to="/faq" icon={<HelpOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        {/* <Item title='FAQ Page' to="/faq" icon={<HelpOutLinedIcon />} selected={selected} setSelected={setSelected} /> */}
 
                         <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Charts</Typography>
                         <Item title='Bar Chart' to="/bar" icon={<BarCharOutLinedIcon />} selected={selected} setSelected={setSelected} />
