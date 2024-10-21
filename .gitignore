@@ -1,0 +1,6 @@
+/ai_model/data/
+Thumbs.db
+desktop.ini
+__pycache__/
+*.py[cod]
+*.so

@@ -44,25 +44,25 @@ const Navbar = () => {
         <Box
             sx={{
                 "& .pro-sidebar-inner": {
-                    backgroundColor: `${colors.primary[400]} !important`, // sidebar background color
+                    backgroundColor: `${colors.primary[400]} !important`, //sidebar background color
                 },
                 "& .pro-icon-wrapper": {
-                    backgroundColor: 'transparent !important', // icon background
+                    backgroundColor: 'transparent !important', //icon background
                 },
                 "& .pro-inner-item": {
-                    padding: "5px 35px 5px 20px !important", // padding for each item
+                    padding: "5px 35px 5px 20px !important", //padding for each item
                 },
                 "& .pro-inner-item:hover": {
-                    color: "#868dfb !important", // hover color for items
+                    color: "#868dfb !important", //hover color for items
                 },
                 "& .pro-menu-item.active": {
-                    color: "#6870fa !important", // active item color
+                    color: "#6870fa !important", //active item color
                 },
             }}
         >
             <ProSidebar collapsed={isCollapsed}>
                 <Menu iconShape='square'>
-                    {/* Logo and Menu Icon */}
+                    {/* logo and menu icon */}
                     <MenuItem
                         onClick={() => setIsCollapsed(!isCollapsed)}
                         icon={isCollapsed ? <MenuOutLinedIcon /> : undefined}
@@ -83,7 +83,7 @@ const Navbar = () => {
                         )}
                     </MenuItem>
 
-                    {/* User Info */}
+                    {/* user info */}
                     {!isCollapsed && (
                         <Box mb="25px">
                             <Box display="flex" justifyContent="center" alignItems="center">
@@ -106,7 +106,7 @@ const Navbar = () => {
                         </Box>
                     )}
 
-                    {/* Menu Items */}
+                    {/* menu items */}
                     <Box paddingLeft={isCollapsed ? undefined : "10%"}>
                         <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Data</Typography>
                         <Item title='Dashboard' to="/" icon={<HomeOutLinedIcon />} selected={selected} setSelected={setSelected} />
