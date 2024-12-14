@@ -4,7 +4,7 @@ import pickle
 
 #defining paths
 data_dir = 'ai_model/data'
-output_dir = 'ai_model/data/preprocessed'
+output_dir = 'ai_model/data/processed_data'
 
 #ensuring output directory exists
 os.makedirs(output_dir, exist_ok=True)
