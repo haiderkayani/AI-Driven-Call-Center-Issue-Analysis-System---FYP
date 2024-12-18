@@ -6,7 +6,7 @@ import Navbar from "./scenes/global/Navbar";
 import Dashboard from "./scenes/dashboard"
 // import Invoices from "./scenes/invoices"
 import Team from "./scenes/team"
-// import Contacts from "./scenes/contacts"
+import Contacts from "./scenes/contacts"
 // import Form from "./scenes/form"
 // import Line from "./scenes/line"
 // import FAQ from "./scenes/faq"
@@ -30,7 +30,7 @@ function App() {
               <Route path='/' element={<Dashboard />} />
               <Route path='/team' element={<Team />} /> 
               {/* <Route path='/invoices' element={<Invoices />} /> */}
-              {/* <Route path='/contacts' element={<Contacts />} /> */}
+              <Route path='/contacts' element={<Contacts />} />
               {/* <Route path='/form' element={<Form />} /> */}
               {/* <Route path='/line' element={<Line />} /> */}
               {/* <Route path='/faq' element={<FAQ />} /> */}
