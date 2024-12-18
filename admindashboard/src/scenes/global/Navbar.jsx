@@ -112,7 +112,7 @@ const Navbar = () => {
                         <Item title='Dashboard' to="/" icon={<HomeOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Manage Team' to="/team" icon={<PeopleOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Contact Information' to="/contacts" icon={<ContactsOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        {/* <Item title='Invoices Balances' to="/invoices" icon={<ReceiptOutLinedIcon />} selected={selected} setSelected={setSelected} /> */}
+                        <Item title='Invoices Balances' to="/invoices" icon={<ReceiptOutLinedIcon />} selected={selected} setSelected={setSelected} />
 
                         <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Pages</Typography>
                         <Item title='Profile Form' to="/form" icon={<PersonOutLinedIcon />} selected={selected} setSelected={setSelected} />
