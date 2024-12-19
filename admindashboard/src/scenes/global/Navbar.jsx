@@ -16,6 +16,8 @@ import PieChartOutlineOutLinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutLinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutLinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutLinedIcon from "@mui/icons-material/MapOutlined";
+import ShowChartOutlinedIcon from '@mui/icons-material/ShowChartOutlined';
+import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();
@@ -108,22 +110,22 @@ const Navbar = () => {
 
                     {/* menu items */}
                     <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-                        <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Data</Typography>
-                        <Item title='Dashboard' to="/" icon={<HomeOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        {/* <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Data</Typography> */}
+                        <Item title='Dashboard' to="/" icon={<GridViewOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Manage Team' to="/team" icon={<PeopleOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Contact Information' to="/contacts" icon={<ContactsOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Issue Status' to="/issuestatus" icon={<ReceiptOutLinedIcon />} selected={selected} setSelected={setSelected} />
 
-                        <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Pages</Typography>
-                        <Item title='Profile Form' to="/form" icon={<PersonOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='Calendar' to="/calendar" icon={<CalendarTodayOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        {/* <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Pages</Typography> */}
+                        <Item title='Profile' to="/form" icon={<PersonOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        <Item title='Call Analytics' to="/calendar" icon={<ShowChartOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         {/* <Item title='FAQ Page' to="/faq" icon={<HelpOutLinedIcon />} selected={selected} setSelected={setSelected} /> */}
 
-                        <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Charts</Typography>
-                        <Item title='Bar Chart' to="/bar" icon={<BarCharOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='Pie Chart' to="/pie" icon={<PieChartOutlineOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='Line Chart' to="/line" icon={<TimelineOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='World Chart' to="/geography" icon={<MapOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        {/* <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Charts</Typography> */}
+                        <Item title='Call Metrics' to="/bar" icon={<BarCharOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        <Item title='Reports' to="/pie" icon={<CalendarTodayOutLinedIcon  />} selected={selected} setSelected={setSelected} />
+                        {/* <Item title='Line Chart' to="/line" icon={<TimelineOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        <Item title='World Chart' to="/geography" icon={<MapOutLinedIcon />} selected={selected} setSelected={setSelected} /> */}
                     </Box>
                 </Menu>
             </ProSidebar>

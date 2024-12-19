@@ -17,7 +17,7 @@ const Contacts = () => {
         },
         {
             field : "registrarId",
-            headerName : "Registrar ID,"
+            headerName : "Registrar ID",
         },
         {
             field: "name", 
