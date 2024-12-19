@@ -53,14 +53,14 @@ const Team = () => {
                         justifyContent= "center"
                         backgroundColor = {
                             access === "admin"
-                              ? colors.greenAccent[600]
-                              : colors.greenAccent[700]
+                              ? '#de796e'
+                              : '#e09991'
                         }
                         borderRadius= "4px"
                     >
                         {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
                         {access === "manager" && <SecurtiyOutlinedIcon />}
-                        {access === "user" && <LockOpenOutlinedIcon />}
+                        {access === "agent" && <LockOpenOutlinedIcon />}
                         <Typography color = {colors.gray[100]} sx={{ml : "5px"}}>
                             {access}
                         </Typography>
@@ -74,7 +74,7 @@ const Team = () => {
 
     return (
         <Box m = "20px">
-            <Header title = "TEAM" subtitle= "Managing the Team Members" />
+            <Header title = "TEAM" subtitle= {<span style={{ color: colors.blueAccent[300] }}>Managing the Team Members</span>} />
             <Box m = "40px 0 0 0" height = "75vh" sx = {{
                 "& .MuiDataGrid-root": {
                     border : "none"
@@ -83,10 +83,10 @@ const Team = () => {
                     borderBottom : "none"
                 },
                 "& .name-column--cell": {
-                    color : colors.greenAccent[300]
+                    color : colors.blueAccent[200]
                 },
                 "& .MuiDataGrid-columnHeader":{
-                    backgroundColor : colors.blueAccent[700],
+                    backgroundColor : colors.blueAccent[400],
                     borderBottom : "none"
                 },
                 "& .MuiDataGrid-virtualScroller": {
@@ -94,7 +94,7 @@ const Team = () => {
                 },
                 "& .MuiDataGrid-footerContainer": {
                     borderTop : "none",
-                    backgroundColor : colors.blueAccent[700]
+                    backgroundColor : colors.blueAccent[400]
                 },
             }}>
                <DataGrid

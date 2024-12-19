@@ -73,7 +73,7 @@ const Navbar = () => {
                     >
                         {!isCollapsed && (
                             <Box display="flex" justifyContent="space-between" alignItems="center" ml="15px">
-                                <Typography variant="h6" color={colors.redAccent[400]}>
+                                <Typography variant="h6" color={colors.blueAccent[300]}>
                                     Call Issue Analysis System
                                 </Typography>
                                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
@@ -99,7 +99,7 @@ const Navbar = () => {
                                 <Typography variant="h4" color={colors.gray[100]} fontWeight="bold" sx={{ m: "10px 0 0 0" }}>
                                     Meowy Whiskers
                                 </Typography>
-                                <Typography variant="h6" color={colors.greenAccent[500]}>
+                                <Typography variant="h6" color={colors.blueAccent[300]}>
                                     CEO FYP Studios
                                 </Typography>
                             </Box>
@@ -112,7 +112,7 @@ const Navbar = () => {
                         <Item title='Dashboard' to="/" icon={<HomeOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Manage Team' to="/team" icon={<PeopleOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Contact Information' to="/contacts" icon={<ContactsOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='Invoices Balances' to="/invoices" icon={<ReceiptOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        <Item title='Issue Status' to="/issuestatus" icon={<ReceiptOutLinedIcon />} selected={selected} setSelected={setSelected} />
 
                         <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Pages</Typography>
                         <Item title='Profile Form' to="/form" icon={<PersonOutLinedIcon />} selected={selected} setSelected={setSelected} />

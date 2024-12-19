@@ -52,16 +52,16 @@ const Contacts = () => {
             headerName : "City",
             flex : 1,
         },
-        {
-            field : "zipCode",
-            headerName : "Zip Code",
-            flex : 1,
-        },
+        // {
+        //     field : "zipCode",
+        //     headerName : "Zip Code",
+        //     flex : 1,
+        // },
     ];
 
     return (
         <Box m = "20px">
-            <Header title = "CONTACTS" subtitle= "List of Contacts for Future Refernce" />
+            <Header title = "CONTACTS" subtitle= {<span style={{ color: colors.blueAccent[300] }}>List of Contacts</span>} />
             <Box m = "40px 0 0 0" height = "75vh" sx = {{
                     "& .MuiDataGrid-root": {
                         border : "none"
@@ -70,10 +70,10 @@ const Contacts = () => {
                         borderBottom : "none"
                     },
                     "& .name-column--cell": {
-                        color : colors.greenAccent[300]
+                        color : colors.blueAccent[200]
                     },
                     "& .MuiDataGrid-columnHeader":{
-                        backgroundColor : colors.blueAccent[700],
+                        backgroundColor : colors.blueAccent[400],
                         borderBottom : "none"
                     },
                     "& .MuiDataGrid-virtualScroller": {
@@ -81,7 +81,7 @@ const Contacts = () => {
                     },
                     "& .MuiDataGrid-footerContainer": {
                         borderTop : "none",
-                        backgroundColor : colors.blueAccent[700]
+                        backgroundColor : colors.blueAccent[400]
                     },
                     "&MultiCheckbox-root" : {
                         color : `${colors.greenAccent[200]} !important`,
