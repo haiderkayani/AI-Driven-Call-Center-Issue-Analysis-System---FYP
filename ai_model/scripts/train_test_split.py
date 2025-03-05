@@ -1,19 +1,15 @@
-import pandas as pd
 from sklearn.model_selection import train_test_split
-import os
+import pandas as pd
 
-#defining paths
-processed_data_dir = 'ai_model\data\processed_data'
-encoded_data_path = os.path.join(processed_data_dir, 'encoded_dataset.csv')
+# Load encoded dataset again (if needed)
+df_encoded = pd.read_csv("ai_model/data/processed_data/encoded_dataset.csv")
 
-#loading encoded dataset and splitting into train test
-df = pd.read_csv(encoded_data_path)
-train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+# Splitting data (80% train, 20% test)
+train_df, test_df = train_test_split(df_encoded, test_size=0.2, random_state=42)
 
-#saving
-train_path = os.path.join(processed_data_dir, 'train_dataset.csv')
-test_path = os.path.join(processed_data_dir, 'test_dataset.csv')
-train_df.to_csv(train_path, index=False)
-test_df.to_csv(test_path, index=False)
-print(f"train dataset saved to {train_path}")
-print(f"test dataset saved to {test_path}")
+# Save the splits
+train_df.to_csv("ai_model/data/processed_data/train_data.csv", index=False)
+test_df.to_csv("ai_model/data/processed_data/test_data.csv", index=False)
+
+print(f"Training data saved: {len(train_df)} samples")
+print(f"Testing data saved: {len(test_df)} samples")
