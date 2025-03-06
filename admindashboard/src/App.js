@@ -7,10 +7,10 @@ import Dashboard from "./scenes/dashboard"
 import IssueStatus from "./scenes/issuestatus"
 import Team from "./scenes/team"
 import Contacts from "./scenes/contacts"
-// import Form from "./scenes/form"
+import Form from "./scenes/form"
 // import Line from "./scenes/line"
 // import FAQ from "./scenes/faq"
-// import Bar from "./scenes/bar"
+import Bar from "./scenes/bar"
 // import Pie from "./scenes/pie"
 // import Geography from "./scenes/geography"
 // import Calendar from "./scenes/calendar"
@@ -31,10 +31,10 @@ function App() {
               <Route path='/team' element={<Team />} /> 
               <Route path='/issuestatus' element={<IssueStatus />} />
               <Route path='/contacts' element={<Contacts />} />
-              {/* <Route path='/form' element={<Form />} /> */}
+              <Route path='/form' element={<Form />} />
               {/* <Route path='/line' element={<Line />} /> */}
               {/* <Route path='/faq' element={<FAQ />} /> */}
-              {/* <Route path='/bar' element={<Bar />} /> */}
+              <Route path='/bar' element={<Bar />} />
               {/* <Route path='/pie' element={<Pie />} /> */}
               {/* <Route path='/geography' element={<Geography />} /> */}
               {/* <Route path='/calendar' element={<Calendar />} /> */}
