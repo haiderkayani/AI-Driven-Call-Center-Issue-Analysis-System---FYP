@@ -1,33 +1,24 @@
-import os
 import pandas as pd
-import pickle
+from transformers import Wav2Vec2CTCTokenizer
 
-#defining paths
-data_dir = 'ai_model/data'
-output_dir = 'ai_model/data/processed_data'
+# Define paths
+tokenizer_dir = "e:/AI-Driven-Call-Center-Issue-Analysis-System---FYP/ai_model/data"
+merged_vocab_path = f"{tokenizer_dir}/merged_vocab.json"
+dataset_path = f"{tokenizer_dir}/dataset.tsv"
 
-#ensuring output directory exists
-os.makedirs(output_dir, exist_ok=True)
+# Load tokenizer
+tokenizer = Wav2Vec2CTCTokenizer(
+    merged_vocab_path, unk_token="[UNK]", pad_token="<pad>", bos_token="<s>", eos_token="</s>"
+)
 
-#loading tsv file and converting list to dictionary
-tsv_path = os.path.join(data_dir, 'dataset.tsv')
-df = pd.read_csv(tsv_path, delimiter='\t')
+# Load dataset
+df = pd.read_csv(dataset_path, sep="\t")
 
-vocab_path = os.path.join(data_dir, 'char_to_num_vocab.pkl')
-with open(vocab_path, 'rb') as f:
-    char_to_num = pickle.load(f)
+# Tokenize text column
+df["encoded_text"] = df["sentence"].apply(lambda x: tokenizer(x)["input_ids"])
 
-if isinstance(char_to_num, list):
-    char_to_num = {char: idx for idx, char in enumerate(char_to_num)}
+# Save processed dataset
+processed_data_path = f"{tokenizer_dir}/processed_data/processed_data.csv"
+df.to_csv(processed_data_path, index=False)
 
-#encoding function
-def encode_text(text, char_to_num):
-    return [char_to_num[char] for char in text if char in char_to_num]
-
-df['encoded_text'] = df['sentence'].apply(lambda x: encode_text(x, char_to_num))
-
-#saving encoded data to new csv file
-encoded_data_path = os.path.join(output_dir, 'encoded_dataset.csv')
-df.to_csv(encoded_data_path, index=False)
-
-print(f"encoded data saved to {encoded_data_path}")
+print(f"Processed dataset saved at {processed_data_path}")
