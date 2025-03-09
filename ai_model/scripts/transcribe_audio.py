@@ -13,7 +13,7 @@ model = Wav2Vec2ForCTC.from_pretrained(model_name)
 # Paths
 audio_dir = r"E:\AI-Driven-Call-Center-Issue-Analysis-System---FYP\\ai_model\data\\limited_wav_files\\limited_wav_files"
 dataset_path = r"E:\AI-Driven-Call-Center-Issue-Analysis-System---FYP\\ai_model\data\dataset.tsv"  # Ensure this contains 'filename' column
-output_file = "ai_model/data/talha_transcriptions.csv"  # Output file
+output_file = "ai_model/data/processed_data/transcribed_audio.csv"  # Output file
 
 df = pd.read_csv(dataset_path, sep="\t")
 audio_files = df["path"]  
