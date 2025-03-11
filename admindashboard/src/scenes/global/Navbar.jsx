@@ -26,7 +26,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
     return (
         <MenuItem
             active={selected === title}
-            style={{ color: colors.gray[100], }}
+            // style={{ color: colors.gray[100], }}
             onClick={() => setSelected(title)}
             icon={icon}
         >
@@ -70,12 +70,12 @@ const Navbar = () => {
                         icon={isCollapsed ? <MenuOutLinedIcon /> : undefined}
                         style={{
                             margin: "10px 0 20px 0",
-                            color: colors.gray[100],
+                            // color: colors.gray[100],
                         }}
                     >
                         {!isCollapsed && (
                             <Box display="flex" justifyContent="space-between" alignItems="center" ml="15px">
-                                <Typography variant="h6" color={colors.blueAccent[300]}>
+                                <Typography variant="h6" >
                                     Call Issue Analysis System
                                 </Typography>
                                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
@@ -98,10 +98,10 @@ const Navbar = () => {
                                 />
                             </Box>
                             <Box textAlign="center">
-                                <Typography variant="h4" color={colors.gray[100]} fontWeight="bold" sx={{ m: "10px 0 0 0" }}>
+                                <Typography variant="h4" fontWeight="bold" sx={{ m: "10px 0 0 0" }}>
                                     Meowy Whiskers
                                 </Typography>
-                                <Typography variant="h6" color={colors.blueAccent[300]}>
+                                <Typography variant="h6">
                                     CEO FYP Studios
                                 </Typography>
                             </Box>
@@ -124,8 +124,8 @@ const Navbar = () => {
                         {/* <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Charts</Typography> */}
                         <Item title='Call Metrics' to="/bar" icon={<BarCharOutLinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Reports' to="/pie" icon={<CalendarTodayOutLinedIcon  />} selected={selected} setSelected={setSelected} />
-                        {/* <Item title='Line Chart' to="/line" icon={<TimelineOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='World Chart' to="/geography" icon={<MapOutLinedIcon />} selected={selected} setSelected={setSelected} /> */}
+                        <Item title='Line Chart' to="/line" icon={<TimelineOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        <Item title='World Chart' to="/geography" icon={<MapOutLinedIcon />} selected={selected} setSelected={setSelected} />
                     </Box>
                 </Menu>
             </ProSidebar>
