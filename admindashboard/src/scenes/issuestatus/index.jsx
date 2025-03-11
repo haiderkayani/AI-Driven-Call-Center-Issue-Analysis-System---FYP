@@ -45,8 +45,8 @@ const IssueStatus = () => {
                         justifyContent= "center"
                         backgroundColor = {
                             status === "Unresolved"
-                              ? '#de796e'
-                              : '#e09991'
+                              ? '#f47560'
+                              : '#44b29a'
                         }
                         borderRadius= "4px"
                     >
@@ -80,10 +80,10 @@ const IssueStatus = () => {
                         borderBottom : "none"
                     },
                     "& .name-column--cell": {
-                        color : colors.blueAccent[200]
+                        color : colors.blueAccent[100]
                     },
                     "& .MuiDataGrid-columnHeader":{
-                        backgroundColor : colors.blueAccent[400],
+                        backgroundColor : colors.blueAccent[500],
                         borderBottom : "none"
                     },
                     "& .MuiDataGrid-virtualScroller": {
@@ -91,7 +91,7 @@ const IssueStatus = () => {
                     },
                     "& .MuiDataGrid-footerContainer": {
                         borderTop : "none",
-                        backgroundColor : colors.blueAccent[400]
+                        backgroundColor : colors.blueAccent[500]
                     },
                     "&MultiCheckbox-root" : {
                         color : `${colors.greenAccent[200]} !important`,

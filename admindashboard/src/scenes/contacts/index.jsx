@@ -70,10 +70,10 @@ const Contacts = () => {
                         borderBottom : "none"
                     },
                     "& .name-column--cell": {
-                        color : colors.blueAccent[200]
+                        color : colors.blueAccent[100]
                     },
                     "& .MuiDataGrid-columnHeader":{
-                        backgroundColor : colors.blueAccent[400],
+                        backgroundColor : colors.blueAccent[500],
                         borderBottom : "none"
                     },
                     "& .MuiDataGrid-virtualScroller": {
@@ -81,7 +81,7 @@ const Contacts = () => {
                     },
                     "& .MuiDataGrid-footerContainer": {
                         borderTop : "none",
-                        backgroundColor : colors.blueAccent[400]
+                        backgroundColor : colors.blueAccent[500]
                     },
                     "&MultiCheckbox-root" : {
                         color : `${colors.greenAccent[200]} !important`,

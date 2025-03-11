@@ -54,7 +54,7 @@ const Team = () => {
                         backgroundColor = {
                             access === "admin"
                               ? '#de796e'
-                              : '#e09991'
+                              : '#44b29a'
                         }
                         borderRadius= "4px"
                     >
@@ -83,10 +83,10 @@ const Team = () => {
                     borderBottom : "none"
                 },
                 "& .name-column--cell": {
-                    color : colors.blueAccent[200]
+                    color : colors.blueAccent[100]
                 },
                 "& .MuiDataGrid-columnHeader":{
-                    backgroundColor : colors.blueAccent[400],
+                    backgroundColor : colors.blueAccent[500],
                     borderBottom : "none"
                 },
                 "& .MuiDataGrid-virtualScroller": {
@@ -94,7 +94,7 @@ const Team = () => {
                 },
                 "& .MuiDataGrid-footerContainer": {
                     borderTop : "none",
-                    backgroundColor : colors.blueAccent[400]
+                    backgroundColor : colors.blueAccent[500]
                 },
             }}>
                <DataGrid

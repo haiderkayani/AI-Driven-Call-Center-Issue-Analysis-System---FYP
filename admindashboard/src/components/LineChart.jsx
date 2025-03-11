@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import { mockLineData as data } from "../data/mockData";
 
-const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
+const LineChart = ({ isCustomLineColors = true, isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -24,7 +24,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
           },
           ticks: {
             line: {
-              stroke: colors.gray[100],
+              stroke: colors.blueAccent[300],
               strokeWidth: 1,
             },
             text: {
@@ -43,8 +43,9 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
           },
         },
       }}
-      colors={isDashboard ? { datum: "color" } : { scheme: "nivo" }} // added
-      margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+      // colors={isDashboard ? { scheme: "nivo" } : { datum: "color" }} // added
+      colors={isCustomLineColors ? ["#f47560", "#f1e15b", "#1a535c"] : { datum: "color" }}
+      margin={{ top: 50, right: 120, bottom: 50, left: 60 }}
       xScale={{ type: "point" }}
       yScale={{
         type: "linear",
@@ -62,7 +63,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
         tickSize: 0,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "transportation", // added
+        legend: isDashboard ? undefined : "month", // added
         legendOffset: 36,
         legendPosition: "middle",
       }}
@@ -95,7 +96,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
           itemDirection: "left-to-right",
           itemWidth: 80,
           itemHeight: 20,
-          itemOpacity: 0.75,
+          itemOpacity: 0.85,
           symbolSize: 12,
           symbolShape: "circle",
           symbolBorderColor: "rgba(0, 0, 0, .5)",
@@ -103,7 +104,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
             {
               on: "hover",
               style: {
-                itemBackground: "rgba(0, 0, 0, .03)",
+                itemBackground: "rgba(100, 181, 246, 1)",
                 itemOpacity: 1,
               },
             },

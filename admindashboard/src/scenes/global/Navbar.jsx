@@ -118,14 +118,14 @@ const Navbar = () => {
 
                         {/* <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Pages</Typography> */}
                         <Item title='Profile Form' to="/form" icon={<PersonOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='Call Analytics' to="/calendar" icon={<ShowChartOutlinedIcon />} selected={selected} setSelected={setSelected} />
+                        {/* <Item title='Call Analytics' to="/calendar" icon={<ShowChartOutlinedIcon />} selected={selected} setSelected={setSelected} /> */}
                         {/* <Item title='FAQ Page' to="/faq" icon={<HelpOutLinedIcon />} selected={selected} setSelected={setSelected} /> */}
 
                         {/* <Typography variant="h6" color={colors.gray[300]} sx={{ m: "15px 0 5px 20px" }}>Charts</Typography> */}
                         <Item title='Call Metrics' to="/bar" icon={<BarCharOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='Reports' to="/pie" icon={<CalendarTodayOutLinedIcon  />} selected={selected} setSelected={setSelected} />
-                        <Item title='Line Chart' to="/line" icon={<TimelineOutLinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='World Chart' to="/geography" icon={<MapOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        <Item title='Call Sentiments' to="/pie" icon={<PieChartOutlineOutLinedIcon  />} selected={selected} setSelected={setSelected} />
+                        <Item title='Call Volume' to="/line" icon={<TimelineOutLinedIcon />} selected={selected} setSelected={setSelected} />
+                        {/* <Item title='Calls Geography' to="/geography" icon={<MapOutLinedIcon />} selected={selected} setSelected={setSelected} /> */}
                     </Box>
                 </Menu>
             </ProSidebar>

@@ -12,6 +12,7 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import PieChart from "../../components/PieChart";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -143,21 +144,21 @@ const Dashboard = () => {
                 fontWeight="600"
                 color={colors.gray[100]}
               >
-                Customer Sentiment Analysis
+                Overall Call Volume
               </Typography>
               <Typography
                 variant="h3"
                 fontWeight="bold"
-                color={colors.blueAccent[300]}
+                // color={colors.greenAccent[300]}
               >
                 
               </Typography>
             </Box>
             <Box>
               <IconButton>
-                <DownloadOutlinedIcon
+                {/* <DownloadOutlinedIcon
                   sx={{ fontSize: "26px", color: colors.blueAccent[300] }}
-                />
+                /> */}
               </IconButton>
             </Box>
           </Box>
@@ -268,12 +269,12 @@ const Dashboard = () => {
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ marginBottom: "15px" }}
+            sx={{ marginBottom: "5px" }}
           >
-            Call Traffic Distribution
+            Call Sentiments
           </Typography>
-          <Box height="200px">
-            <GeographyChart isDashboard={true} />
+          <Box height="250px">
+            <PieChart isDashboard={true} />
           </Box>
         </Box>
       </Box>
