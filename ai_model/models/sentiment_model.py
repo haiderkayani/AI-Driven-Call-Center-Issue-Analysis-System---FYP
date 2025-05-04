@@ -1,5 +1,3 @@
-# sentiment_model.py
-
 from transformers import pipeline
 
 # Load sentiment analysis pipeline
