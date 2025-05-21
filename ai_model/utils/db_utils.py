@@ -39,7 +39,7 @@ def save_to_database(audio_filename, urdu_transcription, english_translation,
 
     # 4. Insert into issues
     cursor.execute("""
-        INSERT INTO issues (call_id, category, description, urgency)
+        INSERT INTO issues (call_id, category, description, urgency_level)
         VALUES (%s, %s, %s, %s);
     """, (call_id, issue_category, issue_description, issue_urgency))
 

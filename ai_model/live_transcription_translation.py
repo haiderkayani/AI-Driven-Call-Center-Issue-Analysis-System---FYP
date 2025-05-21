@@ -18,18 +18,15 @@ def live_transcribe_and_translate():
             english_translation = translate_urdu_to_english(urdu_transcription)
             print(f"Translation (English): {english_translation}")
 
-            # NEW: Sentiment analysis
             sentiment = analyze_sentiment(english_translation)
             sentiment_label = sentiment['label']
             sentiment_score = sentiment['score']
             print(f"Sentiment: {sentiment_label} (Confidence: {sentiment_score:.4f})")
 
-            # ✅ Issue analysis
             issue_info = extract_issue_and_urgency(english_translation)
             print(f"Issue Category: {issue_info['category']}")
             print(f"Urgency Level: {issue_info['urgency']}")
 
-            # Save everything
             audio_filename = f"recording_{datetime.now().strftime('%Y%m%d_%H%M%S')}.wav"
             save_to_database(
                 audio_filename,

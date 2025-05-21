@@ -1,12 +1,10 @@
 from transformers import pipeline
 
-# Load sentiment analysis pipeline
 sentiment_pipeline = pipeline(
     "sentiment-analysis",
     model="cardiffnlp/twitter-roberta-base-sentiment"
 )
 
-# Mapping of model labels to human-readable sentiment
 label_map = {
     "LABEL_0": "NEGATIVE",
     "LABEL_1": "NEUTRAL",
